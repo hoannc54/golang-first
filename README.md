@@ -6,6 +6,10 @@ Project đầu tiên về golang
 ## Tài liệu
 * Document: https://golang.org/doc/
 * Các Packages : https://golang.org/pkg/
+* Github: 
+    - https://github.com/golang/go/wiki
+    - 
+* https://www.tutorialspoint.com/go/index.htm
 
 ### Book
 * [An Introduction to Programming in Go](http://www.golang-book.com/books/intro)
@@ -13,6 +17,13 @@ Project đầu tiên về golang
 ## IDE: 
 * Sublime Text: Package https://github.com/DisposaBoy/GoSublime
 
+## Go tốt nhất cho việc gì?
+
+Phân phối các network service (dịch vụ mạng). Các chương trình ứng dụng mạng (network application) sống hay chết là dựa vào concurrency và các tính năng native concurrency của Go, các goroutines và các channel, rất phù hợp cho các tác vụ đó. Do đó, có nhiều dự án Go dành cho mạng, các chức năng distributed (phân phối) và dịch vụ đám mây: API, web server, minimal frameworks cho các web application và các loại tương tự.
+
+Sự phát triển của cloud-native. Các tính năng concurrency và network của Go và tính linh hoạt cao của nó làm cho nó phù hợp với việc xây dựng các ứng dụng cloud-native. Trên thực tế, Go đã được sử dụng để xây dựng một trong những nền tảng phát triển ứng dụng dựa trên cloud-native, ứng dụng hệ thống containerization Docker.
+
+Thay thế cho cơ sở hạ tầng hiện có. Phần lớn các phần mềm của chúng tôi phụ thuộc vào cơ sở hạ tầng Internet đã lạc hậu. Việc viết lại những thứ như vậy bằng Go mang lại nhiều lợi ích, như giữ an toàn bộ nhớ tốt hơn, triển khai trên nhiều nền tảng dễ dàng hơn và một code base “sạch” để hỗ trợ bảo trì trong tương lai. Một server SSH mới được gọi là Teleport và một phiên bản mới của Network Time Protocol được viết bằng Go, được cung cấp như phương pháp thay thế cho các đối tác thông thường của họ.
 
 ## Command 
 
@@ -68,12 +79,38 @@ Go tour from Git: https://github.com/golang/tour
 
 ### Basic
 
-* Khai báo biến 
-* Gọi hàm 
-* Packages
+#### Khai báo biến 
+#### Gọi hàm 
+#### Packages
 
-* for, if, else, switch, defer
+#### for, if, else, switch, defer
+
+**for**
+
+**if**
+
+**if with a short statement**
+
+Viết thêm câu lệnh vào trước điều kiện
+    
+```
+if v := math.Pow(x, n); v < lim {
+        return v
+    }
+```
+  
+
+**if else**
 * struct, slices, map
+
+**defer**
+Giữ hàm cho đến khi các hàm khác thực thi xong
+
+**Pointer**
+
+**Stacking defers**
+
+Nếu có nhiều hơn 2 defer thì defer tuân theo luật stack để chạy 
 
 ### Method, interface
 
